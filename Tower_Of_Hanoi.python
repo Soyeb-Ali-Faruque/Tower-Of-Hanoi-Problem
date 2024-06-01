@@ -1,0 +1,8 @@
+def plate_shifting(n,starting,destination,helper):
+    if(n>0):
+        plate_shifting(n-1,starting,helper,destination)
+        print("Moved the disk {} from {} to {}".format(n,starting,destination))
+        plate_shifting(n-1,helper,destination,starting)
+
+#Test Values
+plate_shifting(3,'Start','End','Mid')
